@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Deepsico demo AR </h1>
+      <h1>Deepsico Augmented Reality Demo</h1>
       <div className="control-buttons">
         {started === null && (
           <button
