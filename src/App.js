@@ -61,7 +61,7 @@ function App() {
 
       {started === "mock-lotus" && (
         <div className="container">
-          <MindARMock image="/lotus-flower.jpg" target={lotusFlowerMind} />
+          <MindARMock image="./lotus-flower.jpg" target={lotusFlowerMind} />
           <video></video>
         </div>
       )}
@@ -73,7 +73,7 @@ function App() {
       )}
       {started === "mock-artbat" && (
         <div className="container">
-          <MindARMock image="/zoomed_out.jpg" target={artbatMind} />
+          <MindARMock image="./zoomed_out.jpg" target={artbatMind} />
           <video></video>
         </div>
       )}
