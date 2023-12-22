@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/deepsico-demo/static/css/main.bf7ef00b.css",
+    "main.js": "/deepsico-demo/static/js/main.663a11fb.js",
+    "static/js/787.748328a5.chunk.js": "/deepsico-demo/static/js/787.748328a5.chunk.js",
+    "static/media/artbat_logo_2.mind": "/deepsico-demo/static/media/artbat_logo_2.eb7ec664caf65893ba1a.mind",
+    "static/media/artbat_logo.mind": "/deepsico-demo/static/media/artbat_logo.fe92f9cf55c74ef7574f.mind",
+    "static/media/lotus-flower.mind": "/deepsico-demo/static/media/lotus-flower.1289215a29cc466e2122.mind",
+    "index.html": "/deepsico-demo/index.html",
+    "main.bf7ef00b.css.map": "/deepsico-demo/static/css/main.bf7ef00b.css.map",
+    "main.663a11fb.js.map": "/deepsico-demo/static/js/main.663a11fb.js.map",
+    "787.748328a5.chunk.js.map": "/deepsico-demo/static/js/787.748328a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf7ef00b.css",
+    "static/js/main.663a11fb.js"
+  ]
+}
