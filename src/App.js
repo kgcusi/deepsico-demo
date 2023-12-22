@@ -61,7 +61,10 @@ function App() {
 
       {started === "mock-lotus" && (
         <div className="container">
-          <MindARMock image="./lotus-flower.jpg" target={lotusFlowerMind} />
+          <MindARMock
+            image="./images/lotus-flower.jpg"
+            target={lotusFlowerMind}
+          />
           <video></video>
         </div>
       )}
@@ -69,11 +72,12 @@ function App() {
       {started === "video-lotus" && (
         <div className="container">
           <MindARVideo target={lotusFlowerMind} />
+          <video></video>
         </div>
       )}
       {started === "mock-artbat" && (
         <div className="container">
-          <MindARMock image="./zoomed_out.jpg" target={artbatMind} />
+          <MindARMock image="./images/zoomed_out.jpg" target={artbatMind} />
           <video></video>
         </div>
       )}
@@ -81,6 +85,7 @@ function App() {
       {started === "video-artbat" && (
         <div className="container">
           <MindARVideo target={artbatMind} />
+          <video></video>
         </div>
       )}
     </div>
