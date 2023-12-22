@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from "react"
 import { MindARThree } from "mind-ar/dist/mindar-image-three.prod.js"
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import artbatMind from "./targets/artbat_logo.mind"
 import lotusFlowerMind from "./targets/lotus-flower.mind"
-import { mockWithImage } from "./libs/camera-mock"
 
 export default () => {
   const containerRef = useRef(null)

@@ -3,7 +3,6 @@ import "./App.css"
 import MindARMock from "./mindar-mock"
 import MindARVideo from "./mindar-camera"
 import artbatMind from "./targets/artbat_logo.mind"
-import artbat2Mind from "./targets/artbat_logo_2.mind"
 import lotusFlowerMind from "./targets/lotus-flower.mind"
 
 function App() {
