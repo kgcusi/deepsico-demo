@@ -24,7 +24,7 @@ export default () => {
     const anchor = mindarThree.addAnchor(0)
     // Load 3D Model
     const loader = new GLTFLoader()
-    loader.load("/models/01_barren.glb", (gltf) => {
+    loader.load("./models/01_barren.glb", (gltf) => {
       myModel = gltf.scene
       anchor.group.add(myModel)
 
