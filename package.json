@@ -14,10 +14,8 @@
     "three": "^0.150.1",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "https://kgcusi.github.io/deepsico-demo/",
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "node setHomepage.js 'https://kgcusi.github.io/deepsico-demo/' && npm run build",
     "deploy": "gh-pages -d build",
     "start-https": "cross-env HTTPS=true react-scripts start",
     "build": "react-scripts build",

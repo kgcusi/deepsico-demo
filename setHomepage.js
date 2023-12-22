@@ -8,7 +8,8 @@ function setHomepage(homepage) {
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
 
   if (homepage) {
-    packageJson.homepage = homepage
+    // Ensure we're setting a string without extra quotes
+    packageJson.homepage = homepage.replace(/['"]+/g, "")
   } else {
     delete packageJson.homepage
   }
@@ -17,5 +18,6 @@ function setHomepage(homepage) {
   console.log(`Homepage set to: ${homepage || "null"}`)
 }
 
-const homepage = process.argv[2] // Pass the homepage URL as a command line argument
+// Remove the extra single quotes that might be passed as part of the command line argument
+const homepage = process.argv[2].replace(/['"]+/g, "")
 setHomepage(homepage)
