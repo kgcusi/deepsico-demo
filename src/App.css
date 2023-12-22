@@ -5,12 +5,15 @@
 .control-buttons {
   position: relative;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .container {
   margin: 20px auto;
   position: relative;
-  height: 300px;
+  height: 500px;
   width: 600px;
   overflow: hidden;
 }
