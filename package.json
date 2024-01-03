@@ -14,7 +14,6 @@
     "three": "^0.150.1",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "http://kgcusi.github.io/deepsico-demo",
   "scripts": {
     "start": "react-scripts start",
     "deploy": "gh-pages -d build",

@@ -4,6 +4,7 @@ import MindARMock from "./mindar-mock"
 import MindARVideo from "./mindar-camera"
 import artbatMind from "./targets/artbat_logo.mind"
 import lotusFlowerMind from "./targets/lotus-flower.mind"
+import bnwLogo from "./targets/bnw_logo.mind"
 
 function App() {
   const [started, setStarted] = useState(null)
@@ -28,6 +29,24 @@ function App() {
             }}
           >
             Start Mock Lotus version
+          </button>
+        )}
+        {started === null && (
+          <button
+            onClick={() => {
+              setStarted("video-bnw")
+            }}
+          >
+            Start Video Black and White version
+          </button>
+        )}
+        {started === null && (
+          <button
+            onClick={() => {
+              setStarted("mock-bnw")
+            }}
+          >
+            Start Mock Black and White version
           </button>
         )}
         {started === null && (
@@ -72,6 +91,23 @@ function App() {
       {started === "video-lotus" && (
         <div className="container">
           <MindARVideo target={lotusFlowerMind} />
+          <video></video>
+        </div>
+      )}
+
+      {started === "mock-bnw" && (
+        <div className="container">
+          <MindARMock
+            image="./images/bnw_placeholder.jpg"
+            target={bnwLogo}
+          />
+          <video></video>
+        </div>
+      )}
+
+      {started === "video-bnw" && (
+        <div className="container">
+          <MindARVideo target={bnwLogo} />
           <video></video>
         </div>
       )}
