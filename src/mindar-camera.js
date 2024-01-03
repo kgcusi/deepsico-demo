@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from "react"
 import { MindARThree } from "mind-ar/dist/mindar-image-three.prod.js"
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import lotusFlowerMind from "./targets/lotus-flower.mind"
 
-export default () => {
+export default ({target}) => {
   const containerRef = useRef(null)
 
   let myModel = null
@@ -13,7 +12,7 @@ export default () => {
     // After setting up the mock, initialize MindARThree
     const mindarThree = new MindARThree({
       container: containerRef.current,
-      imageTargetSrc: lotusFlowerMind,
+      imageTargetSrc: target,
     })
 
     const { renderer, scene, camera } = mindarThree
