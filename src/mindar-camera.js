@@ -30,7 +30,7 @@ export default ({ target }) => {
       myModel.current.scale.set(10, 10, 10);
       myModel.current.position.set(0, -0.3, 0);
     });
-
+//
     mindarThree.start();
     renderer.setAnimationLoop(() => {
       if (myModel.current) {
