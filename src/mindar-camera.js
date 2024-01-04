@@ -11,6 +11,7 @@ export default ({ target }) => {
 
   let myModel = useRef(null);
 
+  // AR Setup and Model Loading
   useEffect(() => {
     const mindarThree = new MindARThree({
       container: containerRef.current,
@@ -30,13 +31,9 @@ export default ({ target }) => {
       myModel.current.scale.set(10, 10, 10);
       myModel.current.position.set(0, -0.3, 0);
     });
-//
+
     mindarThree.start();
     renderer.setAnimationLoop(() => {
-      if (myModel.current) {
-        myModel.current.rotation.x = rotation.x;
-        myModel.current.rotation.y = rotation.y;
-      }
       renderer.render(scene, camera);
     });
 
@@ -44,26 +41,35 @@ export default ({ target }) => {
       renderer.setAnimationLoop(null);
       mindarThree.stop();
     };
-  }, [rotation]);
+  }, [target]); // Only run this effect on mount and when 'target' changes
 
-  const handleStart = (clientX, clientY) => {
+  // Rotation Handling
+  useEffect(() => {
+    if (myModel.current) {
+      myModel.current.rotation.x = rotation.x;
+      myModel.current.rotation.y = rotation.y;
+    }
+  }, [rotation]); // Run this effect when 'rotation' changes
+
+  // Event Handlers for Rotation
+  const handleMouseDown = (event) => {
     setIsDragging(true);
-    setStartDrag({ x: clientX, y: clientY });
+    setStartDrag({ x: event.clientX, y: event.clientY });
   };
 
-  const handleMove = (clientX, clientY) => {
+  const handleMouseMove = (event) => {
     if (isDragging) {
-      const deltaX = clientX - startDrag.x;
-      const deltaY = clientY - startDrag.y;
+      const deltaX = event.clientX - startDrag.x;
+      const deltaY = event.clientY - startDrag.y;
       setRotation((rot) => ({
         x: rot.x + deltaY * 0.01,
         y: rot.y + deltaX * 0.01,
       }));
-      setStartDrag({ x: clientX, y: clientY });
+      setStartDrag({ x: event.clientX, y: event.clientY });
     }
   };
 
-  const handleEnd = () => {
+  const handleMouseUp = () => {
     setIsDragging(false);
   };
 
@@ -71,13 +77,10 @@ export default ({ target }) => {
     <div
       style={{ width: "100%", height: "100%" }}
       ref={containerRef}
-      onMouseDown={(e) => handleStart(e.clientX, e.clientY)}
-      onMouseMove={(e) => handleMove(e.clientX, e.clientY)}
-      onMouseUp={handleEnd}
-      onMouseLeave={handleEnd}
-      onTouchStart={(e) => handleStart(e.touches[0].clientX, e.touches[0].clientY)}
-      onTouchMove={(e) => handleMove(e.touches[0].clientX, e.touches[0].clientY)}
-      onTouchEnd={handleEnd}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
     ></div>
   );
 };
