@@ -77,6 +77,7 @@ export default ({ target }) => {
     <div
       style={{ width: "100%", height: "100%" }}
       ref={containerRef}
+      //Rotation Actions
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
