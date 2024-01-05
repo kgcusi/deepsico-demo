@@ -81,7 +81,7 @@ export default ({ target }) => {
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      // onMouseLeave={handleMouseUp}
     ></div>
   );
 };
