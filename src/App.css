@@ -1,4 +1,4 @@
-.App {
+.text-center {
   text-align: center;
 }
 
@@ -6,8 +6,32 @@
   position: relative;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* stack buttons vertically */
+  align-items: center; /* center buttons horizontally */
   gap: 10px;
+}
+
+/* For tablets and small desktops */
+@media (min-width: 768px) {
+  .control-buttons {
+    flex-direction: row; /* stack buttons horizontally */
+    justify-content: center; /* center buttons horizontally */
+    gap: 20px;
+  }
+}
+
+/* For medium desktops */
+@media (min-width: 992px) {
+  .control-buttons {
+    gap: 30px;
+  }
+}
+
+/* For large desktops and TVs */
+@media (min-width: 1200px) {
+  .control-buttons {
+    gap: 40px;
+  }
 }
 
 .container {

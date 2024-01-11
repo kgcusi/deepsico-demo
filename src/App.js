@@ -5,13 +5,15 @@ import MindARVideo from "./mindar-camera"
 import artbatMind from "./targets/artbat_logo.mind"
 import lotusFlowerMind from "./targets/lotus-flower.mind"
 import bnwLogo from "./targets/bnw_logo.mind"
+import FaceFilter2D from "./face-filter-2d"
+import FaceFilter3D from "./face-filter-3d"
 
 function App() {
   const [started, setStarted] = useState(null)
 
   return (
     <div className="App">
-      <h1>Deepsico Augmented Reality Demo</h1>
+      <h1 className="text-center">Deepsico Augmented Reality Demo</h1>
       <div className="control-buttons">
         {started === null && (
           <button
@@ -65,6 +67,24 @@ function App() {
             }}
           >
             Start Mock Artbat version
+          </button>
+        )}
+        {started === null && (
+          <button
+            onClick={() => {
+              setStarted("face-mask-2d")
+            }}
+          >
+            Start Face 2D Filter
+          </button>
+        )}
+        {started === null && (
+          <button
+            onClick={() => {
+              setStarted("face-mask-3d")
+            }}
+          >
+            Start Face 3D Filter
           </button>
         )}
         {started !== null && (
@@ -124,8 +144,16 @@ function App() {
           <video></video>
         </div>
       )}
+
+      {started === "face-mask-2d" && (
+          <FaceFilter2D/>
+      )}
+      {started === "face-mask-3d" && (
+          <FaceFilter3D/>
+      )}
     </div>
   )
+  
 }
 
 export default App
