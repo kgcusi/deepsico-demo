@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/deepsico-demo/static/css/main.0a611cb0.css",
+    "main.js": "/deepsico-demo/static/js/main.4b93d4f5.js",
+    "static/js/614.c3cf2ec2.chunk.js": "/deepsico-demo/static/js/614.c3cf2ec2.chunk.js",
+    "static/js/787.748328a5.chunk.js": "/deepsico-demo/static/js/787.748328a5.chunk.js",
+    "static/media/bnw_logo.mind": "/deepsico-demo/static/media/bnw_logo.72a40e0f017a093886ab.mind",
+    "static/media/artbat_logo.mind": "/deepsico-demo/static/media/artbat_logo.fe92f9cf55c74ef7574f.mind",
+    "static/media/lotus-flower.mind": "/deepsico-demo/static/media/lotus-flower.1289215a29cc466e2122.mind",
+    "index.html": "/deepsico-demo/index.html",
+    "main.0a611cb0.css.map": "/deepsico-demo/static/css/main.0a611cb0.css.map",
+    "main.4b93d4f5.js.map": "/deepsico-demo/static/js/main.4b93d4f5.js.map",
+    "614.c3cf2ec2.chunk.js.map": "/deepsico-demo/static/js/614.c3cf2ec2.chunk.js.map",
+    "787.748328a5.chunk.js.map": "/deepsico-demo/static/js/787.748328a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a611cb0.css",
+    "static/js/main.4b93d4f5.js"
+  ]
+}
